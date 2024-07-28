@@ -10,13 +10,13 @@ import static apis.Routes.BASE_PATH;
 
 public class SpecBuilder {
 
-    public RequestSpecification getReqSpec(){
+    public static RequestSpecification getReqSpec(){
         return new RequestSpecBuilder()
                 .setBaseUri(BASE_PATH)
                 .build();
     }
 
-    public ResponseSpecification getResSpec(){
+    public static ResponseSpecification getResSpec(){
         return new ResponseSpecBuilder()
                 .log(LogDetail.ALL)
                 .build();
