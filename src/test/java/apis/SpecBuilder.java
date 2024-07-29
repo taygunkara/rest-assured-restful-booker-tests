@@ -2,23 +2,35 @@ package apis;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import static apis.Routes.BASE_PATH;
+import static apis.Routes.BASE_URL;
 
+/**
+ * The SpecBuilder class provides methods to build request and response specifications
+ * for the RestAssured API tests.
+ */
 public class SpecBuilder {
 
-    public static RequestSpecification getReqSpec(){
+    /**
+     * Builds and returns a request specification with the base URI set.
+     *
+     * @return the request specification
+     */
+    public static RequestSpecification buildRequestSpec(){
         return new RequestSpecBuilder()
-                .setBaseUri(BASE_PATH)
+                .setBaseUri(BASE_URL)
                 .build();
     }
 
-    public static ResponseSpecification getResSpec(){
+    /**
+     * Builds and returns a response specification.
+     *
+     * @return the response specification
+     */
+    public static ResponseSpecification buildResponseSpec(){
         return new ResponseSpecBuilder()
-                .log(LogDetail.ALL)
                 .build();
     }
 }
