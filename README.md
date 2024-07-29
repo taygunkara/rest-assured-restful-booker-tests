@@ -105,7 +105,7 @@ cd rest-assured-restful-booker-tests
 mvn test -DsuiteXmlFile=testng.xml
 ```
 
-- **View the Allure report in your browser**
+- **View the Allure report in your browser:**
 ```bash
 allure serve allure-results
 ```
