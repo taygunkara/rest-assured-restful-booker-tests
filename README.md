@@ -91,8 +91,8 @@ The project consists of the following main components:
 To set up the project, follow these steps:
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/booking-api-automation.git
-cd booking-api-automation
+git clone https://github.com/taygunkara/rest-assured-restful-booker-tests.git
+cd rest-assured-restful-booker-tests
 ```
 
 2. **Open the project in your preferred Java IDE** (e.g., IntelliJ, Eclipse).
