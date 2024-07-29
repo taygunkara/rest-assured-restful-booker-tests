@@ -87,6 +87,7 @@ The project consists of the following main components:
 │           └── testng.xml
 .
 ```
+## Installation
 
 To set up the project, follow these steps:
 1. **Clone the repository**:
