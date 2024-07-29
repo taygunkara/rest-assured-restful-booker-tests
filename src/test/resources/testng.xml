@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite" parallel="tests" thread-count="4">
+    <test name="MyTest">
+        <classes>
+            <class name="tests.CreateBookingTests"/>
+            <class name="tests.DeleteBookingTests"/>
+            <class name="tests.GetBookingIdsTests"/>
+            <class name="tests.GetBookingTests"/>
+            <class name="tests.HealthCheckTests"/>
+            <class name="tests.PartialUpdateBookingTests"/>
+            <class name="tests.UpdateBookingTests"/>
+        </classes>
+    </test>
+</suite>
