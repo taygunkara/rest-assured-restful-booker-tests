@@ -10,6 +10,8 @@ Welcome to the Booking API Automation project! This project is designed to perfo
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Key Architectural Features](#key-architectural-features)
+- [Future Enhancements](#future-enhancements)
 - [Technologies Used](#technologies-used)
 - [Maven Libraries Used](#maven-libraries-used)
 - [Project Structure](#project-structure)
@@ -21,12 +23,24 @@ Welcome to the Booking API Automation project! This project is designed to perfo
 
 ## Introduction
 
-This project focuses on automating the testing of a booking API developed using Java and configured with Maven. The tests cover various operations such as creating, retrieving, updating, and deleting bookings.
+This project automates the testing of a booking API, covering all essential CRUD operations. The framework is built with a focus on clean code, maintainability, and scalability, employing a multi-layered architecture to separate concerns effectively.
 
-### Key Features
-- Comprehensive API tests for booking management
-- Singleton pattern for managing configurations and data generation
-- Support for partial and full updates, as well as health checks
+## Key Architectural Features
+- **Layered Architecture:** Clear separation between API interaction logic, test data generation, and test case definitions.
+- **Reusable API Components:** A dedicated `RestResources` class that abstracts Rest Assured calls, making tests cleaner and independent of the underlying library.
+- **Centralized Specification:** `SpecBuilder` for managing common request/response specifications (base URI, headers, etc.), promoting the DRY principle.
+- **Atomic Tests:** Each test case is independent and self-contained, creating its own data and not relying on the state of other tests.
+- **Dynamic Data Generation:** Uses `JavaFaker` to generate realistic and unique test data for each run.
+
+## Future Enhancements
+This framework is built on a solid foundation, and the next steps are focused on elevating it to an enterprise-grade standard of quality and observability.
+
+- **Refine Class Responsibilities (SRP):** The `BookingHelper` class will be refactored into two distinct classes to adhere to the Single Responsibility Principle:
+    - **`TestDataFactory`:** Will be solely responsible for building and providing test data objects (`Booking`, `BookingDates`, etc.).
+    - **`BookingAssertions`:** Will contain custom assertion methods for validating API responses and booking models.
+- **Implement Fluent Assertions with AssertJ:** Transition from standard TestNG assertions to **AssertJ**. This will significantly improve the readability and expressiveness of the test validations with a more powerful fluent API.
+- **Integrate Comprehensive Logging:** Implement **SLF4J** with a Logback/Log4j2 backend to introduce structured logging. This will provide deep insights into test execution, log every API request/response, and drastically simplify debugging, especially within a CI/CD pipeline.
+
 
 ## Technologies Used
 
