@@ -8,6 +8,8 @@
 
 Welcome to the Booking API Automation project! This project is designed to perform automated tests for a booking system API using Java. It includes API tests and follows a structured approach for managing test data and configurations.
 
+[Project Article](https://taygunkara.github.io/pages/projects/rest-assured-api-framework-projesi.html)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Key Architectural Features](#key-architectural-features)
